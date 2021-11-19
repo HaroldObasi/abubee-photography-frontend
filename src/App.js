@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState} from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
+import Home from "./screens/Home";
+import Menu from "./components/Menu";
+import MobileMenu from "./components/MobileMenu";
+import Hire from './screens/Hire';
+import About from './screens/About'
+import CreatePhoto from './screens/CreatePhoto';
+import Admin from './screens/Admin';
+import Signin from './screens/Signin';
 
 function App() {
+
+  const [windowwidth, setWindowWidth] = useState(window.innerWidth)
+  window.addEventListener('resize', () => {
+    setWindowWidth(window.innerWidth)
+  });
+
+  const prefMenu = () => {
+    if (windowwidth > 972){
+      return <Menu />
+    }else{
+      return <MobileMenu />
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+      {prefMenu()}
+      <Route path = "/" exact component = {Home} />
+      <Route path = "/hire" component = {Hire} />
+      <Route path = "/about" component = {About} />
+      <Route path = "/admin" exact component = {Admin} />
+      <Route path = "/admin/createphoto" component = {CreatePhoto} />
+      <Route path = "/admin/signin" component = {Signin} />
+    </BrowserRouter>
+    </>
   );
 }
 

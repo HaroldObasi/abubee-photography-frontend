@@ -1,13 +1,443 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ==================================================== VARIABLES ==================================================== */
+:root {
+  --menuBackground: #1e90ff;
+  --white: #ffffff;
+  --bodyBackground: #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ampersand{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  
+  color: #C3361A;
+}
+
+body{
+  background-color: var(--bodyBackground);
+  color: white;
+}
+/* ==================================================== MENU ==================================================== */
+.menu{
+  display: flex;
+  justify-content: space-between;
+  background: var(--bodyBackground);
+  /* background: #F7F7F7; */
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.main-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-logo .logo-top{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.main-logo .text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 13px;
+  width: 194px;
+
+  display: flex;
+  justify-content: space-between;
+  
+  color: #FFFFFF;
+
+}
+
+.menu-options{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.005em;
+  font-family: Roboto;
+  align-items: center;
+  width: 20%;
+}
+
+.menu-options a{
+  color: white;
+}
+
+/* ==================================================== MOBILE MENU ==================================================== */
+
+.mobile-menu{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: var(--bodyBackground);
+  padding-left: 20px;
+}
+
+.hamburger{
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.hamburger i{
+  font-size: 25px;
+}
+
+.side-bar{
+  height: 100vh;
+  width: 170px;
+  background-color: var(--bodyBackground);
+  position: fixed;
+  top: 0;
+  right: -170px;
+  z-index: 3;
+}
+
+.side-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 300px;
+}
+
+.side-options ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+}
+
+.side-options li{
+  padding: 15px 0 15px 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: white;
+}
+.side-options li a{
+  color: white;
+}
+.side-options li:hover{
+  background-color: #963535;;
+}
+
+.side-links{
+  height: 100%;
+  width: 100%;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.see-through{
+  display: none;
+
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.side-icons{
+  position: absolute;
+  left: 20px;
+}
+
+.slideRight{
+  right: 0;
+}
+
+/* ==================================================== HAMBURGER ==================================================== */
+
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 25px;
+}
+
+.bar{
+  width: 36px;
+  height: 1px;
+  background-color: white;
+}
+
+/* ==================================================== SIGNIN && SIGNUP ==================================================== */
+.signup-body{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+/* ==================================================== HIRE PAGE ==================================================== */
+.hire-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  
+  color: #FFFFFF;
+  
+}
+
+.hire-body{
+  padding: 20px 48px 0 48px;
+}
+
+.signup-title{
+  font-family: Roboto;
+  font-size: 25px;
+  letter-spacing: 0.12em;
+}
+
+.signup-fields label{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12.4573px;
+  /* identical to box height */
+  
+  letter-spacing: 0.12em;
+  
+  color: white;
+}
+
+.field-input input{
+  width: 367px;
+  height: 45px;  
+  background: #F7F7F7;
+  border: 1px solid #ffffff;
+  color: white;
+  font-family: Roboto;
+  background-color: #ffffff00;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signup-btn{
+  width: 115px;
+  height: 35px;
+  background: #E5E5E5;
+  color: black;
+  border-radius: 3px;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  /* identical to box height */
+  
+  letter-spacing: 0.12em;
+}
+
+
+.signup-btn :hover{
+  background: white;
+  color: black;
+}
+
+/* ==================================================== ABOUT PAGE ==================================================== */
+
+.about-title{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.about-details{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.about-img{
+  /* width: 285px;
+  height: 285px; */
+  border-radius: 10px;
+}
+
+.about-writeup{
+  width: 285.69px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17.5639px;
+  line-height: 26px;
+}
+/* ==================================================== CREATE PHOTO ==================================================== */
+.create-photo-main{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.success-msg{
+  font-size: 30px;
+  font-family: 'Poppins';
+}
+
+/* ==================================================== PHOTO ITEM ==================================================== */
+
+.photo-title{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.photo-camera{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  width: 70%;
+}
+
+.photo-det2{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.button-row{
+  width: 305px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.btn1{
+  width: 115px;
+  height: 35px;
+  background: #E5E5E5;
+  color: black;
+  border-radius: 3px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.edit-input{
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  border: none;
+  /* border-bottom: 2px solid gray; */
+
+}
+
+.saveSpin{
+  align-self: center;
+}
+/* ==================================================== HOME ==================================================== */
+.main-row{
+  width: 100%;
+}
+
+.hold{
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====================================================================================================================
+=================================================== RESPONSIVE VIEW PORTS=================================================================
+==================================================================================================================== */
+
+@media only screen and (max-width: 472px) {
+  
+  /* .signup-body{
+    padding-left: 10%;
+    width: 100%;
+  } */
+
+  .hire-title{
+    font-size: 23px;
+  }
+  .field-input input{
+    width: 300px;
+    height: 45px;  
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 972px) {
+  .hire-body{
+    padding: 15px 20px 0 20px;
+  }
+
+}
+
+@media only screen and (max-width: 910px) {
+  /* .about-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+  .create-photo-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  .about-body{
+    padding-top: 50px;
+  }
+  .about-writeup{
+    padding-top: 40px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .about-writeup{
+    width: 100%;
+  }
 }

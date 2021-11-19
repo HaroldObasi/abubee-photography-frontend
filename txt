@@ -1,0 +1,79 @@
+uploaded image:  {
+  asset_id: '0f327990318d15900d7c0344e4ba6343',
+  public_id: 'abubee/ynjxe5bcd2db4lvfhobg',
+  version: 1635966783,
+  version_id: '28e249580f821f9631ccd6117c120f55',
+  signature: '881bd581069667dee452697caf8a3419956ef523',
+  width: 1242,
+  height: 1211,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2021-11-03T19:13:03Z',
+  tags: [],
+  bytes: 46289,
+  type: 'upload',
+  etag: '1b6e1707661ba26042a476436f79784a',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/haroldobasi/image/upload/v1635966783/abubee/ynjxe5bcd2db4lvfhobg.jpg',
+  secure_url: 'https://res.cloudinary.com/haroldobasi/image/upload/v1635966783/abubee/ynjxe5bcd2db4lvfhobg.jpg',
+  access_mode: 'public',
+  api_key: '427664717954148'
+}
+
+<>
+                <div className = "photo-item">
+                    <div className = 'photo-title'>
+                        Title: <input 
+                                    type="text" 
+                                    value = {title} 
+                                    placeholder = {title} 
+                                    className = 'edit-input' 
+                                    ref = {titleInput}
+                                />
+                    </div>
+                    <div className = 'photo-camera mb-1'>
+                        Camera: <input 
+                                    type="text" 
+                                    value = {title}
+                                    placeholder = {camera} 
+                                    className = 'edit-input'
+                                    ref = {cameraInput}
+                                />
+                    </div>
+                    <img src={newUrl} 
+                        alt="Sample title" 
+                    />
+                    <div className = 'photo-det2 pt-3'>
+                        Location:   <input 
+                                        type="text" 
+                                        value = {location}
+                                        placeholder = {location} 
+                                        className = 'edit-input'
+                                        ref = {locationInput}
+                                    />
+                    </div>
+                    <div className = 'photo-det2'>
+                        Shot date: <input 
+                                        type="date" 
+                                        value = {shotDate}
+                                        placeholder = {shotDate} 
+                                        className = 'edit-input' 
+                                        ref
+                                    />
+                        {/* {newDate} */}
+                    </div>
+    
+                    <div className = 'button-row'>
+                        <button 
+                            className="btn1 mt-4" 
+                            style = {{backgroundColor: '#71C15D'}}
+                        >
+                            <b>Save Changes</b>
+                        </button>
+                        <button className="btn1 mt-4" style = {{ backgroundColor: '#C3361A'}}>
+                            <b>Delete Photo</b>
+                        </button>
+    
+                    </div>
+                </div>
+            </>
