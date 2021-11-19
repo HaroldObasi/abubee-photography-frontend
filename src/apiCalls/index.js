@@ -1,5 +1,5 @@
 import axios from "axios";
-const dburl = "http://localhost:5000"
+const dburl = 'https://abubee-photography-api.herokuapp.com' || "http://localhost:5000"
 
 export const fetchPhotos = async() => {
 

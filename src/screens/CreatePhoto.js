@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios';
 import { Spinner } from 'react-bootstrap';
 
-const dburl = "http://localhost:5000"
+const dburl = 'https://abubee-photography-api.herokuapp.com' || "http://localhost:5000"
 
 
 const CreatePhoto = () => {
