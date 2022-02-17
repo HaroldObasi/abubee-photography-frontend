@@ -433,7 +433,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	background-color: #1e90ff;
+	/* background-color: #1e90ff; */
 	/* width: 100%; */
 	margin-left: 20%;
 	margin-right: 20%;
@@ -468,6 +468,10 @@ a {
 	padding-top: 20px;
 }
 
+.msg-table {
+	margin: 0 auto 0 auto;
+	width: 85%;
+}
 /* =================================================== FOOTER ================================================================= */
 .footer-text {
 	font-family: Montserrat;
