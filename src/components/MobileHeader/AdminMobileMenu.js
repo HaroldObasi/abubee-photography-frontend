@@ -24,19 +24,7 @@ const AdminMobileMenu = () => {
 							<span className="side-icons">
 								<i class="fas fa-home"></i>
 							</span>
-							<Link to="/">works</Link>
-						</li>
-						<li>
-							<span className="side-icons">
-								<i class="fas fa-home"></i>
-							</span>
-							<Link to="/hire">hire</Link>
-						</li>
-						<li>
-							<span className="side-icons">
-								<i class="fas fa-home"></i>
-							</span>
-							<Link to="/about">about</Link>
+							<Link to="/">messages</Link>
 						</li>
 					</ul>
 				</div>
