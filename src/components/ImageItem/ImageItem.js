@@ -1,6 +1,6 @@
 import React, {useState, useRef} from "react";
 import { DateTime } from "luxon"
-import { imgUrlTransform } from "../helpers";
+import { imgUrlTransform } from "../../helpers";
 import axios from "axios";
 
 export const ImageItem = ({title, camera, location, shotDate, url}) => {
@@ -19,6 +19,7 @@ export const ImageItem = ({title, camera, location, shotDate, url}) => {
                     {camera}
                 </div>
                 <img src={newUrl} 
+                    className = 'item-img'
                     alt="Sample title" 
                 />
                 <div className = 'photo-det2 pt-3'>

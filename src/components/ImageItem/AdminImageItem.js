@@ -1,10 +1,10 @@
 import React, {useState, useRef} from 'react'
 import { DateTime } from "luxon"
-import { imgUrlTransform } from "../helpers";
+import { imgUrlTransform } from "../../helpers";
 import { Spinner } from 'react-bootstrap';
-import { updatePhoto } from '../apiCalls';
+import { updatePhoto, deletePhoto } from '../../apiCalls';
 import { useDispatch } from 'react-redux';
-import { getAllPhotos } from '../store/actions';
+import { getAllPhotos } from '../../store/actions';
 
 const AdminImageItem = ({id, title, camera, location, shotDate, url}) => {
 
@@ -50,6 +50,14 @@ const AdminImageItem = ({id, title, camera, location, shotDate, url}) => {
         )
     }
 
+    const handleDelete = (e) => {
+        e.preventDefault()
+        setLoading(true)
+        deletePhoto(id).then(
+            setLoading(false)
+        )
+    }
+
     if(!toEdit){
         return(
             <>
@@ -62,6 +70,7 @@ const AdminImageItem = ({id, title, camera, location, shotDate, url}) => {
                     </div>
                     <img src={newUrl} 
                         alt="Sample title" 
+                        className = 'item-img'
                     />
                     <div className = 'photo-det2 pt-3'>
                         {location}
@@ -78,7 +87,21 @@ const AdminImageItem = ({id, title, camera, location, shotDate, url}) => {
                         >
                             <b>Edit Photo</b>
                         </button>
-                        <button className="btn1" style = {{ backgroundColor: '#C3361A'}}>
+                        {
+                        loading ?
+                            (<Spinner 
+                                className = 'saveSpin'
+                                animation="border" 
+                                role="status"
+                                size="sm" 
+                            />)
+                        : null
+                        }
+                        <button 
+                            className="btn1" 
+                            style = {{ backgroundColor: '#C3361A'}}
+                            onClick = {handleDelete}
+                        >
                             <b>Delete Photo</b>
                         </button>
     
@@ -114,6 +137,7 @@ const AdminImageItem = ({id, title, camera, location, shotDate, url}) => {
                     </div>
                     <img src={newUrl} 
                         alt="Sample title" 
+                        className = 'item-img'
                     />
                     <div className = 'photo-det2 pt-3'>
                         Location:   <input 
