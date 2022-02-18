@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Hamburger from "../Hamburger";
+import { signout } from "../../helpers";
 
 const AdminMobileMenu = () => {
 	const toggleSlide = () => {
@@ -25,6 +26,12 @@ const AdminMobileMenu = () => {
 								<i class="fas fa-home"></i>
 							</span>
 							<Link to="/admin/messages">messages</Link>
+						</li>
+						<li onClick={signout}>
+							<span className="side-icons">
+								<i class="fas fa-home"></i>
+							</span>
+							sign out
 						</li>
 					</ul>
 				</div>
