@@ -67,6 +67,9 @@ a {
 	align-items: center;
 	width: 20%;
 }
+.menu-options .link {
+	cursor: pointer;
+}
 
 .menu-options a {
 	color: white;
@@ -205,7 +208,7 @@ a {
 .signup-title {
 	font-family: Roboto;
 	font-size: 25px;
-	letter-spacing: 0.12em;
+	/* letter-spacing: 0.12em; */
 }
 
 .signup-fields label {
@@ -498,10 +501,20 @@ a {
 =================================================== HOVER AND ACTIVE EFFECTS=================================================================
 ==================================================================================================================== */
 
+.btn-text {
+	font-family: Roboto;
+}
+
 .menu-options a {
 	transition: 0.3s;
 }
+.menu-options .link {
+	transition: 0.3s;
+}
 .menu-options a:hover {
+	color: #c3361a;
+}
+.menu-options .link:hover {
 	color: #c3361a;
 }
 
