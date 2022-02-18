@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
+import { signout } from "../../helpers";
 
 const AdminMenu = () => {
 	return (
@@ -14,6 +16,9 @@ const AdminMenu = () => {
 
 				<div className="menu-options">
 					<Link to="/admin/messages">messages</Link>
+					<div className="link" onClick={signout}>
+						sign-out
+					</div>
 				</div>
 			</div>
 		</>
