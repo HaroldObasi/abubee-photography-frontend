@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Hamburger from "../Hamburger";
+import Logo from "../Logo";
 
 const MobileMenu = () => {
 	const token =
@@ -27,34 +29,28 @@ const MobileMenu = () => {
 						<ul>
 							<li>
 								<span className="side-icons">
-									<i class="fas fa-home"></i>
+									<i class="fa-solid fa-briefcase-blank"></i>
 								</span>
-								<Link to="/">works</Link>
+								<Link to="/hire">Hire</Link>
 							</li>
 							<li>
 								<span className="side-icons">
-									<i class="fas fa-home"></i>
+									<i class="fa-solid fa-address-card"></i>
 								</span>
-								<Link to="/hire">hire</Link>
+								<Link to="/about">About</Link>
 							</li>
 							<li>
 								<span className="side-icons">
-									<i class="fas fa-home"></i>
+									<i class="fa-solid fa-user"></i>
 								</span>
-								<Link to="/about">about</Link>
+								<Link to="/signin">Sign-in</Link>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div className="mobile-menu py-4 px-5">
 					<a href="/">
-						<div className="main-logo">
-							<div className="logo-top">Abubakar Ali</div>
-							<div className="text">
-								PHOTOGRAPHER <span className="ampersand">&</span> CREATIVE
-								DIRECTOR
-							</div>
-						</div>
+						<Logo />
 					</a>
 
 					<div onClick={toggleSlide} className="hamburger">
